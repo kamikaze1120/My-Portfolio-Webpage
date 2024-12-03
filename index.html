@@ -12,72 +12,130 @@
     body {
       scroll-behavior: smooth;
     }
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c, #8c52ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-bar-inner {
+      height: 100%;
+      width: 0;
+      background-color: white;
+      border-radius: 5px;
+      transition: width 0.05s ease-out;
+    }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-beige-50 to-brown-200 text-brown-900 font-sans">
-  <div class="loading-screen flex items-center justify-center h-screen bg-gray-900 text-white">
-    <h1 class="text-4xl">Loading...</h1>
+<body class="bg-gradient-to-tr from-indigo-900 via-purple-500 to-pink-500 text-gray-100 font-sans">
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <h1 class="text-4xl font-bold animate-pulse">Loading...</h1>
+    <div class="progress-bar">
+      <div id="progress-bar-inner" class="progress-bar-inner"></div>
+    </div>
   </div>
 
   <!-- Hero Section -->
-  <section class="hero bg-white py-20 text-center shadow-lg" data-aos="fade-up">
-    <h1 class="text-5xl font-bold">Hi, I'm <span class="text-brown-600">Mujtaba Hussain Mohammed</span></h1>
-    <p class="mt-5 text-xl text-gray-600">A passionate Business Analyst with over 10 years of experience in transforming business processes and driving data-driven solutions.</p>
+  <section class="hero bg-gradient-to-b from-purple-500 to-indigo-600 py-20 text-center shadow-lg" data-aos="fade-up">
+    <h1 class="text-5xl font-extrabold text-white">Hi, I'm <span class="text-yellow-400">Mujtaba Hussain Mohammed</span></h1>
+    <p class="mt-5 text-xl text-gray-200">A passionate Business Analyst with over 10 years of experience in transforming business processes and driving data-driven solutions.</p>
   </section>
 
   <!-- Introduction Section -->
-  <section class="intro bg-white py-12 px-6 max-w-5xl mx-auto rounded-lg shadow-md my-8" data-aos="fade-up">
+  <section class="intro bg-white text-gray-900 py-12 px-6 max-w-5xl mx-auto rounded-lg shadow-md my-8" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Introduction</h2>
-    <p class="text-lg text-gray-700 text-center"><strong>Mujtaba Hussain Mohammed</strong><br>Sr. Business Analyst</p>
-    <p class="mt-4 text-lg text-gray-600">
-      Highly experienced Business Data Analyst with over 10 years in various domains, including Governmental, Banking, Telecom, Broadcasting, and Media. Proven expertise in business requirement gathering, process modeling, and system administration...
+    <p class="text-lg text-center"><strong>Mujtaba Hussain Mohammed</strong><br>Sr. Business Analyst</p>
+    <p class="mt-4 text-lg">
+      Highly experienced Business Data Analyst with over 10 years in various domains, including Governmental, Banking, Telecom, Broadcasting, and Media. Proven expertise in business requirement gathering, process modeling, and system administration. Strong analytical skills with a passion for building data-driven solutions from scratch...
     </p>
   </section>
 
   <!-- Skills Section -->
-  <section class="skills bg-white py-12 px-6" data-aos="fade-up">
+  <section class="skills bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white py-12 px-6" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Skills & Expertise</h2>
-    <div class="skills-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="skill bg-beige-100 p-6 text-center rounded-lg shadow-md" data-aos="zoom-in">
+    <div class="skills-list grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="skill bg-pink-700 p-6 text-center rounded-lg shadow-lg" data-aos="zoom-in">
         <h3 class="text-2xl font-semibold">SDLC</h3>
-        <p class="mt-2 text-gray-600">Process</p>
+        <p class="mt-2">Process</p>
       </div>
-      <div class="skill bg-beige-100 p-6 text-center rounded-lg shadow-md" data-aos="zoom-in">
+      <div class="skill bg-pink-700 p-6 text-center rounded-lg shadow-lg" data-aos="zoom-in">
         <h3 class="text-2xl font-semibold">Dev-ops Methodology</h3>
-        <p class="mt-2 text-gray-600">Process</p>
+        <p class="mt-2">Process</p>
       </div>
-      <!-- Add more skills similarly -->
+      <div class="skill bg-pink-700 p-6 text-center rounded-lg shadow-lg" data-aos="zoom-in">
+        <h3 class="text-2xl font-semibold">Project Management</h3>
+        <p class="mt-2">Management</p>
+      </div>
+      <!-- Add more skills here -->
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="experience bg-white py-12 px-6" data-aos="fade-up">
+  <section class="experience bg-white py-12 px-6 text-gray-900" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Experience</h2>
-    <div class="experience-item bg-beige-100 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+    <div class="experience-item bg-gray-100 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
       <h3 class="text-2xl font-semibold">Business Analyst - Wells Fargo</h3>
-      <p class="text-gray-600"><strong>January 2018 - Present</strong></p>
-      <p class="mt-2 text-gray-700">Lead initiatives in optimizing data processing and reporting workflows...</p>
+      <p><strong>January 2018 - Present</strong></p>
+      <p class="mt-2">Lead initiatives in optimizing data processing and reporting workflows, increasing operational efficiency by 20%. Utilized Agile methodologies...</p>
     </div>
-    <!-- Add more experiences similarly -->
+    <!-- Add more experiences here -->
   </section>
 
   <!-- Education Section -->
-  <section class="education bg-white py-12 px-6" data-aos="fade-up">
+  <section class="education bg-gradient-to-b from-blue-600 via-cyan-500 to-teal-400 py-12 px-6 text-white" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Education</h2>
-    <div class="education-item bg-beige-100 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+    <div class="education-item bg-blue-800 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
       <h3 class="text-2xl font-semibold">Bachelor of Science in Information Technology</h3>
-      <p class="text-gray-600"><strong>University of Texas</strong><br>Graduated: May 2014</p>
+      <p><strong>University of Texas</strong><br>Graduated: May 2014</p>
     </div>
+    <!-- Add more education items here -->
   </section>
 
   <!-- Footer Section -->
-  <footer class="bg-brown-800 py-6 text-center text-white">
+  <footer class="bg-indigo-900 py-6 text-center text-white">
     <p>&copy; 2024 Mujtaba Hussain Mohammed. All Rights Reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Loading Screen Logic
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressBarInner = document.getElementById('progress-bar-inner');
+    let progress = 0;
+
+    const loadingInterval = setInterval(() => {
+      progress += 1;
+      progressBarInner.style.width = progress + '%';
+
+      if (progress >= 100) {
+        clearInterval(loadingInterval);
+        loadingScreen.style.display = 'none';
+      }
+    }, 30);
+
     AOS.init();
   </script>
 </body>
+
 </html>
