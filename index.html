@@ -19,7 +19,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #001F3F, #FFD700);
+      background: linear-gradient(135deg, #003366, #FFD700);
       color: white;
       display: flex;
       flex-direction: column;
@@ -61,6 +61,19 @@
       height: 60px;
       width: auto;
     }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
@@ -74,13 +87,13 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="hero bg-gradient-to-b from-blue-900 to-blue-800 py-20 text-center shadow-lg" data-aos="fade-up">
-    <h1 class="text-5xl font-extrabold text-gray-100">Hi, I'm <span class="text-yellow-500">Mujtaba Hussain Mohammed</span></h1>
+  <section id="hero-section" class="hero bg-gradient-to-b from-blue-800 to-blue-700 py-20 text-center shadow-lg hidden" data-aos="fade-up">
+    <h1 class="text-5xl font-extrabold text-gray-100 fade-in">Hi, I'm <span class="text-yellow-500">Mujtaba Hussain Mohammed</span></h1>
     <p class="mt-5 text-xl text-gray-300">Dynamic Business Analyst with expertise in optimizing operations, leveraging analytics, and driving organizational growth across various industries.</p>
   </section>
 
   <!-- Project Section -->
-  <section class="projects bg-gray-900 py-12 px-6 text-gray-300" data-aos="fade-up">
+  <section class="projects bg-gray-900 py-12 px-6 text-gray-300 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div class="project bg-gray-800 p-6 rounded-lg shadow-md">
@@ -103,20 +116,77 @@
   </section>
 
   <!-- Summary Section -->
-  <section class="summary bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 py-12 px-6" data-aos="fade-up">
+  <section class="summary bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 py-12 px-6 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Summary</h2>
     <p class="text-lg text-center">Experienced Business Analyst with a proven track record of leveraging data-driven insights, predictive modeling, and strategic decision-making to enhance operational efficiency. Skilled in workforce forecasting, resource optimization, KPI reporting, and leading cross-functional teams in Agile and Waterfall environments. Adept at creating impactful dashboards and AI-powered tools to meet business objectives across industries like Environmental Services, Banking, Telecom, and Entertainment.</p>
   </section>
 
   <!-- Experience Section -->
-  <section class="experience bg-gray-900 py-12 px-6 text-gray-300" data-aos="fade-up">
+  <section class="experience bg-gray-900 py-12 px-6 text-gray-300 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Experience</h2>
-    <!-- Experience Items -->
-    <!-- Add your experience items here as shown in the original code -->
+
+    <div class="experience-item bg-gray-800 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+      <h3 class="text-2xl font-semibold flex items-center gap-4">
+        <img src="https://www.fortworthtexas.gov/files/assets/public/v/2/communications/images/logo-fit-homepage-space.png?w=1200" alt="City of Fort Worth" class="icon-img">
+        City of Fort Worth – Business System Analyst
+      </h3>
+      <p><strong>May 2023 – Present | Fort Worth, TX</strong></p>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Collaborated across multiple departments to centralize IT systems and streamline processes.</li>
+        <li>Implemented Ivanti Neurons to enhance response times for incident management by 20%.</li>
+        <li>Developed Power BI dashboards to track key workforce metrics and identify trends.</li>
+        <li>Designed AI-powered tools to identify inefficiencies, boosting Waste Management accuracy by 15%.</li>
+        <li>Translated complex technical requirements into actionable project strategies.</li>
+        <li>Partnered with leadership to ensure successful system upgrades and team alignment.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item bg-gray-800 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+      <h3 class="text-2xl font-semibold flex items-center gap-4">
+        <img src="https://cdn.contactcenterworld.com/images/company/wells-fargo-1200px-logo.jpg" alt="Wells Fargo" class="icon-img">
+        Wells Fargo – Senior Business Analyst
+      </h3>
+      <p><strong>Oct 2021 – May 2023 | Irving, TX</strong></p>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Built advanced workforce forecasting models to reduce staffing gaps by 20%.</li>
+        <li>Reduced post-launch errors by 30% through rigorous process improvement initiatives.</li>
+        <li>Implemented BPO cost-benefit evaluations for efficient resource utilization.</li>
+        <li>Developed Tableau dashboards for tracking customer service metrics in real-time.</li>
+        <li>Optimized workflows to improve productivity across multiple departments.</li>
+        <li>Collaborated with cross-functional teams to align operations with business objectives.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item bg-gray-800 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+      <h3 class="text-2xl font-semibold flex items-center gap-4">
+        <img src="https://logodix.com/logo/658404.jpg" alt="Mitel" class="icon-img">
+        Mitel – Senior Business System Analyst
+      </h3>
+      <p><strong>Mar 2021 – Oct 2021 | Dallas, TX</strong></p>
+      <ul class="mt-2 list-disc list-inside">
+        <li>Introduced SAFe Agile practices to improve project delivery speed by 20%.</li>
+        <li>Led workforce headcount analyses to align staffing with business goals.</li>
+        <li>Designed technical documentation for enhanced system understanding and compliance.</li>
+        <li>Facilitated seamless integrations between internal and vendor systems.</li>
+        <li>Optimized budget allocation through data-driven reporting and analysis.</li>
+        <li>Engaged stakeholders to ensure efficient delivery of technical solutions.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item bg-gray-100 p-6 mb-4 rounded-lg shadow-md" data-aos="fade-right">
+      <h3 class="text-2xl font-semibold">Prior Experience</h3>
+      <ul class="mt-2 list-disc list-inside">
+        <li>British Telecom</li>
+        <li>Sprint</li>
+        <li>U.S. Cellular Corp</li>
+        <li>Fox News Network</li>
+        <li>Cycle India</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Certifications Section -->
-  <section class="certifications bg-gray-900 py-12 px-6 text-gray-300" data-aos="fade-up">
+  <section class="certifications bg-gray-900 py-12 px-6 text-gray-300 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Certifications</h2>
     <div class="certifications">
       <img src="https://mwcc.edu/wp-content/uploads/2020/09/Google-IT-Professional-Certificate-Logo-2048x1247.png" alt="Google IT" class="cert-logo">
@@ -126,7 +196,7 @@
   </section>
 
   <!-- Contact Me Section -->
-  <section class="contact-me bg-gray-800 py-12 px-6 text-gray-300" data-aos="fade-up">
+  <section class="contact-me bg-gray-800 py-12 px-6 text-gray-300 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Contact Me</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <form action="mailto:mujtaba.mohammed120@gmail.com" method="POST" enctype="text/plain" class="max-w-lg">
@@ -164,6 +234,13 @@
         if (progress === 100) {
           clearInterval(interval);
           document.getElementById("loading-screen").style.display = "none";
+          document.getElementById("hero-section").classList.remove("hidden");
+          setTimeout(() => {
+            document.getElementById("hero-section").classList.add("fade-in");
+            document.querySelectorAll(".projects, .summary, .experience, .certifications, .contact-me").forEach(section => {
+              section.classList.remove("hidden");
+            });
+          }, 2000); // Show name for 2 seconds
         }
       }, 30);
     });
