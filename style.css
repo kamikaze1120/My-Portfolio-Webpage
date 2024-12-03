@@ -9,27 +9,29 @@ html, body {
   font-family: 'Arial', sans-serif;
   height: 100%;
   line-height: 1.6;
-  background-color: #f4f7fc;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  background-color: #f9f1e7; /* Beige background */
+  color: #5a4d3e; /* Dark Brown text color */
 }
 
 /* Body */
 body {
   font-size: 1rem;
-  background: linear-gradient(135deg, rgba(71, 85, 105, 1) 0%, rgba(15, 23, 42, 1) 100%);
+  background: linear-gradient(135deg, rgba(102, 51, 23, 1) 0%, rgba(189, 141, 101, 1) 100%); /* Brown and beige gradient */
   color: #f0f4f8;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Hero Section */
 .hero {
-  background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+  background: url('https://via.placeholder.com/1920x600/6a4e23/ffffff') no-repeat center center/cover;
   padding: 80px 20px;
   text-align: center;
   color: #fff;
   position: relative;
   z-index: 1;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  animation: fadeIn 2s ease-out;
 }
 
 .hero h1 {
@@ -39,35 +41,39 @@ body {
 }
 
 .hero span {
-  color: #4c6ef5;
+  color: #f5d35e; /* Light beige accent */
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-top: 10px;
+  color: #f5d35e; /* Beige color for emphasis */
 }
 
 /* Intro Section */
 .intro {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   padding: 50px 20px;
   margin: 20px auto;
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 1200px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-in-out;
 }
 
 .intro h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   text-align: center;
   font-weight: 700;
+  color: #5a4d3e;
 }
 
 .intro p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   text-align: center;
+  color: #5a4d3e;
 }
 
 /* Skills Section */
@@ -80,77 +86,81 @@ body {
   font-size: 2.5rem;
   margin-bottom: 40px;
   text-align: center;
-  color: #333;
+  color: #5a4d3e;
 }
 
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 15px;
+  gap: 20px;
 }
 
 .skill {
-  background: #e6efff;
+  background: #e6e1d5; /* Beige background */
   padding: 20px;
-  width: 200px;
+  width: 220px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .skill h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 
 .skill:hover {
   background-color: #4c6ef5;
   color: #fff;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite; /* Pulse animation */
 }
 
 /* Experience, Education, Certifications */
 section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 30px;
-  color: #333;
+  color: #5a4d3e;
 }
 
 section .experience-item, section .education-item, section .certification-item {
   background: #fff;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 section h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
   color: #4c6ef5;
 }
 
 section p {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  color: #5a4d3e;
 }
 
 /* Projects Section */
 .projects {
-  background: #fff;
+  background: #f5d35e; /* Light beige */
   padding: 50px 20px;
 }
 
 .project-item {
-  background: #f8f9fa;
+  background: #fff;
   margin-bottom: 20px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .project-item h3 {
@@ -165,12 +175,12 @@ section p {
 /* Button */
 .button {
   padding: 12px 30px;
-  background-color: #4c6ef5;
+  background-color: #5a4d3e;
   color: #fff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -178,7 +188,7 @@ section p {
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #3d3a2d;
   transform: translateY(-3px);
 }
 
@@ -201,7 +211,7 @@ section p {
 
 /* Footer */
 footer {
-  background: #333;
+  background: #5a4d3e;
   padding: 20px;
   text-align: center;
   color: #fff;
@@ -209,10 +219,45 @@ footer {
 }
 
 footer a {
-  color: #4c6ef5;
+  color: #f5d35e;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
