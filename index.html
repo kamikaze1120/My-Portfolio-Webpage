@@ -70,9 +70,22 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
+    }
+
+    .skill-tile {
+      background-color: #1f2937; /* Dark background for tiles */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .skill-tile:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -92,13 +105,12 @@
     <p class="mt-5 text-xl text-gray-300">Dynamic Business Analyst with expertise in optimizing operations, leveraging analytics, and driving organizational growth across various industries.</p>
   </section>
 
-
   <!-- Summary Section -->
   <section class="summary bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 py-12 px-6 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Summary</h2>
     <p class="text-lg text-center">Experienced Business Analyst with a proven track record of leveraging data-driven insights, predictive modeling, and strategic decision-making to enhance operational efficiency. Skilled in workforce forecasting, resource optimization, KPI reporting, and leading cross-functional teams in Agile and Waterfall environments. Adept at creating impactful dashboards and AI-powered tools to meet business objectives across industries like Environmental Services, Banking, Telecom, and Entertainment.</p>
   </section>
-  
+
   <!-- Project Section -->
   <section class="projects bg-gray-900 py-12 px-6 text-gray-300 hidden" data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-6 text-center">Projects</h2>
@@ -106,23 +118,39 @@
       <div class="project bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 class="text-2xl font-semibold">Ivanti Neurons Implementation</h3>
         <p class="mt-2">Description: Spearheaded the deployment and optimization of Ivanti Neurons for ITSM across a governmental organization. Customized workflows to improve incident management and automated repetitive tasks.
-Impact: Achieved a 30% reduction in ticket resolution time and enhanced overall IT service efficiency.</p>
+        Impact: Achieved a 30% reduction in ticket resolution time and enhanced overall IT service efficiency.</p>
       </div>
       <div class="project bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 class="text-2xl font-semibold">Agile Transformation for IT Teams</h3>
         <p class="mt-2">Description: Led Agile adoption initiatives by conducting training sessions, mentoring teams, and implementing JIRA/Confluence for streamlined project management.
-Impact: Improved team collaboration and increased project delivery speed by 20%, aligning projects closer to business goals.</p>
+        Impact: Improved team collaboration and increased project delivery speed by 20%, aligning projects closer to business goals.</p>
       </div>
       <div class="project bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 class="text-2xl font-semibold">HUD CCDE Implementation</h3>
         <p class="mt-2">Description: Managed the implementation of HUD's Centralized Contract and Data Exchange (CCDE) system, coordinating stakeholder requirements and ensuring data compliance.
-Impact: Enhanced data centralization and improved reporting accuracy for federal housing programs.</p>
+        Impact: Enhanced data centralization and improved reporting accuracy for federal housing programs.</p>
       </div>
       <div class="project bg-gray-800 p-6 rounded-lg shadow-md">
         <h3 class="text-2xl font-semibold">IT Asset Transition to ODPTR Platform</h3>
         <p class="mt-2">Description: Coordinated the migration of IT assets to the ODPTR platform, standardizing asset management processes and streamlining operations.
-Impact: Reduced operational risks and improved asset tracking across the organization.</p>
+        Impact: Reduced operational risks and improved asset tracking across the organization.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-200 py-12 px-6 hidden" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-6 text-center">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="skill-tile">Data Analysis</div>
+      <div class="skill-tile">Business Process Modeling</div>
+      <div class="skill-tile">Agile Methodologies</div>
+      <div class="skill-tile">SQL & Database Management</div>
+      <div class="skill-tile">Stakeholder Management</div>
+      <div class="skill-tile">Requirements Gathering</div>
+      <div class="skill-tile">Project Management</div>
+      <div class="skill-tile">Data Visualization</div>
+      <div class="skill-tile">Risk Analysis</div>
     </div>
   </section>
 
@@ -242,7 +270,7 @@ Impact: Reduced operational risks and improved asset tracking across the organiz
           document.getElementById("hero-section").classList.remove("hidden");
           setTimeout(() => {
             document.getElementById("hero-section").classList.add("fade-in");
-            document.querySelectorAll(".projects, .summary, .experience, .certifications, .contact-me").forEach(section => {
+            document.querySelectorAll(".projects, .summary, .experience, .certifications, .contact-me, .skills").forEach(section => {
               section.classList.remove("hidden");
             });
           }, 2000); // Show name for 2 seconds
